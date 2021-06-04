@@ -47,7 +47,6 @@
             this.templab = new System.Windows.Forms.Label();
             this.nametxtbx = new System.Windows.Forms.TextBox();
             this.submitbtn = new System.Windows.Forms.Button();
-            this.resetbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Title
@@ -226,25 +225,12 @@
             this.submitbtn.UseVisualStyleBackColor = false;
             this.submitbtn.Click += new System.EventHandler(this.submitbtn_Click);
             // 
-            // resetbtn
-            // 
-            this.resetbtn.BackColor = System.Drawing.SystemColors.Window;
-            this.resetbtn.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resetbtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.resetbtn.Location = new System.Drawing.Point(142, 355);
-            this.resetbtn.Name = "resetbtn";
-            this.resetbtn.Size = new System.Drawing.Size(91, 35);
-            this.resetbtn.TabIndex = 22;
-            this.resetbtn.Text = "Reset";
-            this.resetbtn.UseVisualStyleBackColor = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(342, 402);
-            this.Controls.Add(this.resetbtn);
             this.Controls.Add(this.submitbtn);
             this.Controls.Add(this.templab);
             this.Controls.Add(this.temptxtxbx);
@@ -295,7 +281,6 @@
         private System.Windows.Forms.Label templab;
         private System.Windows.Forms.TextBox nametxtbx;
         private System.Windows.Forms.Button submitbtn;
-        private System.Windows.Forms.Button resetbtn;
     }
 }
 

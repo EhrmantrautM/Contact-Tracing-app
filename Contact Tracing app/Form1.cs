@@ -19,9 +19,9 @@ namespace Contact_Tracing_app
         }
         private void submitbtn_Click(object sender, EventArgs e)
         {
-        StreamWriter outputFile = File.CreateText("Contact tracing form.txt");
-        outputFile.WriteLine("Name: "+nametxtbx.Text +"");
-        outputFile.WriteLine();
+            StreamWriter outputFile = File.CreateText("Contact tracing form.txt");
+            outputFile.WriteLine("Name: " + nametxtbx.Text + "");
+            outputFile.WriteLine();
             outputFile.WriteLine("Age: " + agetxtbx.Text + "");
             outputFile.WriteLine();
             outputFile.WriteLine("Address: " + addresstxtbx.Text + "");
@@ -37,6 +37,11 @@ namespace Contact_Tracing_app
             outputFile.WriteLine("Temperature: " + temptxtxbx.Text + "");
             outputFile.WriteLine();
             outputFile.Close();
+            this.Hide();
+            Form2 form2 = new Form2();
+            form2.ShowDialog();
+            
+        }
+  
         }
     }
-}
