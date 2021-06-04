@@ -17,6 +17,26 @@ namespace Contact_Tracing_app
         {
             InitializeComponent();
         }
-        StreamWriter outputFile;
+        private void submitbtn_Click(object sender, EventArgs e)
+        {
+        StreamWriter outputFile = File.CreateText("Contact tracing form.txt");
+        outputFile.WriteLine("Name: "+nametxtbx.Text +"");
+        outputFile.WriteLine();
+            outputFile.WriteLine("Age: " + agetxtbx.Text + "");
+            outputFile.WriteLine();
+            outputFile.WriteLine("Address: " + addresstxtbx.Text + "");
+            outputFile.WriteLine();
+            outputFile.WriteLine("Postal Code: " + postaltxtbx.Text + "");
+            outputFile.WriteLine();
+            outputFile.WriteLine("Contact Number: " + contacttxtbx.Text + "");
+            outputFile.WriteLine();
+            outputFile.WriteLine("Date: " + datetxtbx.Text + "");
+            outputFile.WriteLine();
+            outputFile.WriteLine("Time: " + timetxtbx.Text + "");
+            outputFile.WriteLine();
+            outputFile.WriteLine("Temperature: " + temptxtxbx.Text + "");
+            outputFile.WriteLine();
+            outputFile.Close();
+        }
     }
 }

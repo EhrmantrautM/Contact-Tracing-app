@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Title = new System.Windows.Forms.Label();
-            this.nametxttbx = new System.Windows.Forms.TextBox();
             this.agetxtbx = new System.Windows.Forms.TextBox();
             this.addresstxtbx = new System.Windows.Forms.TextBox();
             this.namelab = new System.Windows.Forms.Label();
@@ -38,12 +37,15 @@
             this.Addresslab = new System.Windows.Forms.Label();
             this.postaltxtbx = new System.Windows.Forms.TextBox();
             this.postallab = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.contacttxtbx = new System.Windows.Forms.TextBox();
             this.contactlab = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.datetxtbx = new System.Windows.Forms.TextBox();
             this.datelab = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.timetxtbx = new System.Windows.Forms.TextBox();
             this.timelab = new System.Windows.Forms.Label();
+            this.temptxtxbx = new System.Windows.Forms.TextBox();
+            this.templab = new System.Windows.Forms.Label();
+            this.nametxtbx = new System.Windows.Forms.TextBox();
             this.submitbtn = new System.Windows.Forms.Button();
             this.resetbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -58,14 +60,6 @@
             this.Title.Size = new System.Drawing.Size(253, 31);
             this.Title.TabIndex = 0;
             this.Title.Text = "Contact Tracing Form";
-            // 
-            // nametxttbx
-            // 
-            this.nametxttbx.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nametxttbx.Location = new System.Drawing.Point(6, 86);
-            this.nametxttbx.Name = "nametxttbx";
-            this.nametxttbx.Size = new System.Drawing.Size(191, 20);
-            this.nametxttbx.TabIndex = 1;
             // 
             // agetxtbx
             // 
@@ -129,19 +123,19 @@
             this.postallab.AutoSize = true;
             this.postallab.BackColor = System.Drawing.Color.Transparent;
             this.postallab.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.postallab.Location = new System.Drawing.Point(238, 173);
+            this.postallab.Location = new System.Drawing.Point(224, 173);
             this.postallab.Name = "postallab";
-            this.postallab.Size = new System.Drawing.Size(59, 22);
+            this.postallab.Size = new System.Drawing.Size(106, 22);
             this.postallab.TabIndex = 8;
-            this.postallab.Text = "Postal";
+            this.postallab.Text = "Postal Code";
             // 
-            // textBox5
+            // contacttxtbx
             // 
-            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(6, 256);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(144, 20);
-            this.textBox5.TabIndex = 9;
+            this.contacttxtbx.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contacttxtbx.Location = new System.Drawing.Point(6, 256);
+            this.contacttxtbx.Name = "contacttxtbx";
+            this.contacttxtbx.Size = new System.Drawing.Size(144, 20);
+            this.contacttxtbx.TabIndex = 9;
             // 
             // contactlab
             // 
@@ -154,13 +148,13 @@
             this.contactlab.TabIndex = 10;
             this.contactlab.Text = "Contact Number";
             // 
-            // textBox6
+            // datetxtbx
             // 
-            this.textBox6.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(6, 314);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(144, 20);
-            this.textBox6.TabIndex = 11;
+            this.datetxtbx.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datetxtbx.Location = new System.Drawing.Point(6, 314);
+            this.datetxtbx.Name = "datetxtbx";
+            this.datetxtbx.Size = new System.Drawing.Size(144, 20);
+            this.datetxtbx.TabIndex = 11;
             // 
             // datelab
             // 
@@ -173,13 +167,13 @@
             this.datelab.TabIndex = 12;
             this.datelab.Text = "Date";
             // 
-            // textBox7
+            // timetxtbx
             // 
-            this.textBox7.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(167, 314);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(69, 20);
-            this.textBox7.TabIndex = 15;
+            this.timetxtbx.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timetxtbx.Location = new System.Drawing.Point(167, 314);
+            this.timetxtbx.Name = "timetxtbx";
+            this.timetxtbx.Size = new System.Drawing.Size(69, 20);
+            this.timetxtbx.TabIndex = 15;
             // 
             // timelab
             // 
@@ -192,27 +186,55 @@
             this.timelab.TabIndex = 16;
             this.timelab.Text = "Time";
             // 
+            // temptxtxbx
+            // 
+            this.temptxtxbx.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.temptxtxbx.Location = new System.Drawing.Point(208, 256);
+            this.temptxtxbx.Name = "temptxtxbx";
+            this.temptxtxbx.Size = new System.Drawing.Size(69, 20);
+            this.temptxtxbx.TabIndex = 19;
+            // 
+            // templab
+            // 
+            this.templab.AutoSize = true;
+            this.templab.BackColor = System.Drawing.Color.Transparent;
+            this.templab.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.templab.Location = new System.Drawing.Point(190, 231);
+            this.templab.Name = "templab";
+            this.templab.Size = new System.Drawing.Size(109, 22);
+            this.templab.TabIndex = 20;
+            this.templab.Text = "Temperature";
+            // 
+            // nametxtbx
+            // 
+            this.nametxtbx.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nametxtbx.Location = new System.Drawing.Point(6, 86);
+            this.nametxtbx.Name = "nametxtbx";
+            this.nametxtbx.Size = new System.Drawing.Size(191, 20);
+            this.nametxtbx.TabIndex = 1;
+            // 
             // submitbtn
             // 
             this.submitbtn.BackColor = System.Drawing.SystemColors.Window;
             this.submitbtn.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitbtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.submitbtn.Location = new System.Drawing.Point(242, 355);
+            this.submitbtn.Location = new System.Drawing.Point(239, 355);
             this.submitbtn.Name = "submitbtn";
             this.submitbtn.Size = new System.Drawing.Size(91, 35);
-            this.submitbtn.TabIndex = 17;
+            this.submitbtn.TabIndex = 21;
             this.submitbtn.Text = "Submit";
             this.submitbtn.UseVisualStyleBackColor = false;
+            this.submitbtn.Click += new System.EventHandler(this.submitbtn_Click);
             // 
             // resetbtn
             // 
             this.resetbtn.BackColor = System.Drawing.SystemColors.Window;
             this.resetbtn.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resetbtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.resetbtn.Location = new System.Drawing.Point(145, 355);
+            this.resetbtn.Location = new System.Drawing.Point(142, 355);
             this.resetbtn.Name = "resetbtn";
             this.resetbtn.Size = new System.Drawing.Size(91, 35);
-            this.resetbtn.TabIndex = 18;
+            this.resetbtn.TabIndex = 22;
             this.resetbtn.Text = "Reset";
             this.resetbtn.UseVisualStyleBackColor = false;
             // 
@@ -220,16 +242,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(342, 402);
             this.Controls.Add(this.resetbtn);
             this.Controls.Add(this.submitbtn);
+            this.Controls.Add(this.templab);
+            this.Controls.Add(this.temptxtxbx);
             this.Controls.Add(this.timelab);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.timetxtbx);
             this.Controls.Add(this.datelab);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.datetxtbx);
             this.Controls.Add(this.contactlab);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.contacttxtbx);
             this.Controls.Add(this.postallab);
             this.Controls.Add(this.postaltxtbx);
             this.Controls.Add(this.Addresslab);
@@ -237,7 +261,7 @@
             this.Controls.Add(this.namelab);
             this.Controls.Add(this.addresstxtbx);
             this.Controls.Add(this.agetxtbx);
-            this.Controls.Add(this.nametxttbx);
+            this.Controls.Add(this.nametxtbx);
             this.Controls.Add(this.Title);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -254,7 +278,6 @@
         #endregion
 
         private System.Windows.Forms.Label Title;
-        private System.Windows.Forms.TextBox nametxttbx;
         private System.Windows.Forms.TextBox agetxtbx;
         private System.Windows.Forms.TextBox addresstxtbx;
         private System.Windows.Forms.Label namelab;
@@ -262,12 +285,15 @@
         private System.Windows.Forms.Label Addresslab;
         private System.Windows.Forms.TextBox postaltxtbx;
         private System.Windows.Forms.Label postallab;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox contacttxtbx;
         private System.Windows.Forms.Label contactlab;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox datetxtbx;
         private System.Windows.Forms.Label datelab;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox timetxtbx;
         private System.Windows.Forms.Label timelab;
+        private System.Windows.Forms.TextBox temptxtxbx;
+        private System.Windows.Forms.Label templab;
+        private System.Windows.Forms.TextBox nametxtbx;
         private System.Windows.Forms.Button submitbtn;
         private System.Windows.Forms.Button resetbtn;
     }
