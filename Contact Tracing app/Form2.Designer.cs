@@ -29,21 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            this.resultbx = new System.Windows.Forms.TextBox();
             this.showbtn = new System.Windows.Forms.Button();
             this.exitbtn = new System.Windows.Forms.Button();
+            this.resultLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // resultbx
-            // 
-            this.resultbx.BackColor = System.Drawing.SystemColors.Info;
-            this.resultbx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.resultbx.Font = new System.Drawing.Font("Times New Roman", 13F);
-            this.resultbx.Location = new System.Drawing.Point(30, 34);
-            this.resultbx.Multiline = true;
-            this.resultbx.Name = "resultbx";
-            this.resultbx.Size = new System.Drawing.Size(297, 317);
-            this.resultbx.TabIndex = 0;
             // 
             // showbtn
             // 
@@ -54,7 +43,7 @@
             this.showbtn.Name = "showbtn";
             this.showbtn.Size = new System.Drawing.Size(195, 37);
             this.showbtn.TabIndex = 1;
-            this.showbtn.Text = "Click to see preview";
+            this.showbtn.Text = "Agree";
             this.showbtn.UseVisualStyleBackColor = false;
             this.showbtn.Click += new System.EventHandler(this.showbtn_Click);
             // 
@@ -71,28 +60,35 @@
             this.exitbtn.UseVisualStyleBackColor = false;
             this.exitbtn.Click += new System.EventHandler(this.exitbtn_Click);
             // 
+            // resultLabel
+            // 
+            this.resultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.resultLabel.Location = new System.Drawing.Point(33, 38);
+            this.resultLabel.Name = "resultLabel";
+            this.resultLabel.Size = new System.Drawing.Size(278, 313);
+            this.resultLabel.TabIndex = 3;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(348, 425);
+            this.Controls.Add(this.resultLabel);
             this.Controls.Add(this.exitbtn);
             this.Controls.Add(this.showbtn);
-            this.Controls.Add(this.resultbx);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form2";
             this.Text = "Contact Tracing Form Review";
-            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox resultbx;
         private System.Windows.Forms.Button showbtn;
         private System.Windows.Forms.Button exitbtn;
+        private System.Windows.Forms.Label resultLabel;
     }
 }

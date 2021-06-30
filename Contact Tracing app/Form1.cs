@@ -17,7 +17,7 @@ namespace Contact_Tracing_app
         {
             InitializeComponent();
         }
-        private void submitbtn_Click(object sender, EventArgs e)
+        public void submitbtn_Click(object sender, EventArgs e)
         {
             StreamWriter outputFile = File.CreateText("Contact tracing form.txt");
             outputFile.WriteLine("Name: " + nametxtbx.Text + "");
@@ -38,10 +38,18 @@ namespace Contact_Tracing_app
             outputFile.WriteLine();
             outputFile.Close();
             this.Hide();
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
-            
-        }
-  
+            {//Scrutinizer
+                if (int.Parse(agetxtbx.Text) < Convert.ToInt32("18"))
+                    MessageBox.Show("In Accordance with the guidelines of the IATF and Local Government Units, persons from 18 to 65 years of age are only authorized to enter the premises.");
+                else if (int.Parse(temptxtxbx.Text) > Convert.ToInt32("37"))
+                    MessageBox.Show("In Accordance with the guidelines of the IATF and Local Government Units, persons lower than 37 degree Celcius are only authorized to enter the premises. "); 
+                else
+                {
+                    Form2 Form2 = new Form2();
+                    Form2.ShowDialog();
+                }
+            }
         }
     }
+}
+

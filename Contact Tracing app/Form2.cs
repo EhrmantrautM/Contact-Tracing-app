@@ -17,14 +17,12 @@ namespace Contact_Tracing_app
         {
             InitializeComponent();
         }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-        }
         private void showbtn_Click(object sender, EventArgs e)
         {
             StreamReader outputFile = new StreamReader("Contact tracing form.txt");
-            resultbx.Text = outputFile.ReadToEnd();
+            resultLabel.Text = outputFile.ReadToEnd();
+
+            showbtn.Hide();
         }
         private void exitbtn_Click(object sender, EventArgs e)
         {
