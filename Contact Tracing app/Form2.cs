@@ -37,7 +37,6 @@ namespace Contact_Tracing_app
             resultLabel.Visible = false;
             btnsave.Visible = false;
             tyLabel.Visible = true; 
-        }
-        
+        }       
     }
 }

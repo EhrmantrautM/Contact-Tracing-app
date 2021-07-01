@@ -38,20 +38,19 @@ namespace Contact_Tracing_app
             outputFile.WriteLine();
             outputFile.Close();
             this.Visible = false;
-            {//Scrutinizer
-                
-                if (Byte.Parse(agetxtbx.Text) < Convert.ToByte("18"))
-                    MessageBox.Show("WARNING: In Accordance with the guidelines of the IATF and Local Government Units, persons from 18 to 65 years of age are only authorized to enter the premises.");
-                    if (float.Parse(temptxtxbx.Text) > Convert.ToByte("37"))
-                    MessageBox.Show("WARNING: In Accordance with the guidelines of the IATF and Local Government Units, persons lower than 37 degree Celcius are only authorized to enter the premises. ");
-                else
-                {
-                    Form2 Form2 = new Form2();
-                    Form2.ShowDialog();
-                }
-                this.Close();
-            }
+            {//Scrutinizer      
+            if (int.Parse(agetxtbx.Text) < (Convert.ToByte("18")))
+                MessageBox.Show("WARNING: In Accordance with the guidelines of the IATF and Local Government Units, persons from 18 to 65 years of age are only authorized to enter the premises.");           
+            else if (float.Parse(temptxtxbx.Text) > Convert.ToByte("37"))
+                 MessageBox.Show("WARNING: In Accordance with the guidelines of the IATF and Local Government Units, persons lower than 37 degree Celcius are only authorized to enter the premises. ");
+            else
+              {
+              Form2 Form2 = new Form2();
+              Form2.ShowDialog();
+              }
+              this.Close();
+           }
         }
     }
-}
-
+ }
+ 
