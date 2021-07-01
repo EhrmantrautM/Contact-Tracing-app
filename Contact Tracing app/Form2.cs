@@ -16,17 +16,28 @@ namespace Contact_Tracing_app
         public Form2()
         {
             InitializeComponent();
+            btnsave.Hide();
+            tyLabel.Visible = false;
         }
         private void showbtn_Click(object sender, EventArgs e)
         {
             StreamReader outputFile = new StreamReader("Contact tracing form.txt");
             resultLabel.Text = outputFile.ReadToEnd();
-
             showbtn.Hide();
+            agreeLabel.Hide();
+            btnsave.Visible = true;
         }
-        private void exitbtn_Click(object sender, EventArgs e)
+        public void exitbtn_Click(object sender, EventArgs e)
         {
-            this.Close();          
+            resultLabel.Hide();
+            this.Close();                        
         }
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+            resultLabel.Visible = false;
+            btnsave.Visible = false;
+            tyLabel.Visible = true; 
+        }
+        
     }
 }
